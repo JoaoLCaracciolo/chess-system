@@ -1,7 +1,5 @@
 package boardgame;
 
-import java.util.Scanner;
-
 public abstract class Piece {
 
     protected Position position;
@@ -18,7 +16,7 @@ public abstract class Piece {
 
     public abstract boolean[][] possibleMoves();
 
-    public boolean PossibleMove(Position position) {
+    public boolean possibleMove(Position position) {
         return possibleMoves()[position.getRow()][position.getColumn()];
     }
 

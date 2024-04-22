@@ -1,7 +1,5 @@
 package boardgame;
 
-import java.util.Scanner;
-
 public class Board {
 
     private int rows;
@@ -40,7 +38,7 @@ public class Board {
     }
 
     public void placePiece(Piece piece, Position position) {
-        if (thereIsApiece(position)){
+        if (thereIsAPiece(position)){
             throw new BoardException("There is already a piece on position" + position);
         }
         pieces[position.getRow()][position.getColumn()] = piece;
@@ -64,11 +62,11 @@ public class Board {
         return row >= 0 && row < rows && column >= 0 && column < columns;
     }
 
-    private boolean positionExists(Position position) {
+    public boolean positionExists(Position position) {
         return positionExists(position.getRow(), position.getColumn());
     }
 
-    public boolean thereIsApiece (Position position) {
+    public boolean thereIsAPiece(Position position) {
         if (!positionExists(position)){
             throw new BoardException("Position not on the board");
         }
