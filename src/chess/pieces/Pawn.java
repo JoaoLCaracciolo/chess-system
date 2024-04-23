@@ -6,8 +6,6 @@ import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.Color;
 
-import java.util.Scanner;
-
 public class Pawn extends ChessPiece {
 
     private ChessMatch chessMatch;
